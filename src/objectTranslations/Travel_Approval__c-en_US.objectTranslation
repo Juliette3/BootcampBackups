@@ -18,6 +18,10 @@
         <name>Destination_State__c</name>
     </fields>
     <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <label><!-- Out-of-State --></label>
         <name>Out_of_State__c</name>
     </fields>
@@ -69,4 +73,8 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Destination State must be entered in UPPERCASE --></errorMessage>
+        <name>Destination_State_must_be_uppercase</name>
+    </validationRules>
 </CustomObjectTranslation>

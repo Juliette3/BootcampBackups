@@ -7194,9 +7194,9 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                     <label>Development Complete</label>
                 </value>
                 <value>
-                    <fullName>No Merge Conflict</fullName>
+                    <fullName>No Merge Conflicts</fullName>
                     <default>false</default>
-                    <label>No Merge Conflict</label>
+                    <label>No Merge Conflicts</label>
                 </value>
                 <value>
                     <fullName>Ready for QA</fullName>
@@ -7498,6 +7498,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <columns>copado__Sprint__c</columns>
         <columns>copado__Project__c</columns>
         <columns>copado__Release__c</columns>
+        <columns>copado__Promote_Change__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>copado__Priority__c</field>
@@ -7962,7 +7963,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <default>false</default>
             </values>
             <values>
-                <fullName>No Merge Conflict</fullName>
+                <fullName>No Merge Conflicts</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8433,7 +8434,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <default>false</default>
             </values>
             <values>
-                <fullName>No Merge Conflict</fullName>
+                <fullName>No Merge Conflicts</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8904,7 +8905,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <default>false</default>
             </values>
             <values>
-                <fullName>No Merge Conflict</fullName>
+                <fullName>No Merge Conflicts</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9375,7 +9376,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <default>false</default>
             </values>
             <values>
-                <fullName>No Merge Conflict</fullName>
+                <fullName>No Merge Conflicts</fullName>
                 <default>false</default>
             </values>
             <values>

@@ -735,8 +735,8 @@
             <translation><!-- Grooming Complete --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>No Merge Conflict</masterLabel>
-            <translation><!-- No Merge Conflict --></translation>
+            <masterLabel>No Merge Conflicts</masterLabel>
+            <translation><!-- No Merge Conflicts --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Production Released</masterLabel>

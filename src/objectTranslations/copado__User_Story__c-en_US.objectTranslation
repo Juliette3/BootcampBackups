@@ -727,12 +727,20 @@
             <translation><!-- Development In Progress --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Grooming</masterLabel>
             <translation><!-- Grooming --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Grooming Complete</masterLabel>
             <translation><!-- Grooming Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No Merge Conflicts</masterLabel>

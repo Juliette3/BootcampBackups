@@ -131,13 +131,13 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>CommunicationSubscriptionId</fullName>
-        <inlineHelpText>The communication subscription record associated with the communication subscription channel type.</inlineHelpText>
+        <inlineHelpText>L&apos;enregistrement d&apos;abonnement aux communications associé au type de canal d&apos;abonnement aux communications.</inlineHelpText>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>EngagementChannelTypeId</fullName>
-        <inlineHelpText>The engagement channel type record associated with the communication subscription channel type.</inlineHelpText>
+        <inlineHelpText>L&apos;enregistrement du type de canal d&apos;engagement associé au type de canal d&apos;abonnement aux communications.</inlineHelpText>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>

@@ -3296,6 +3296,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Tes1__c.test1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Travel_Approval__c.Department__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3943,6 +3948,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Task-Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Tes1__c-Tes1 Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Travel_Approval__c-Travel Approval Layout</layout>

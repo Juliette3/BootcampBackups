@@ -159,7 +159,7 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>ActionDefinition</fullName>
-        <inlineHelpText>Recherchez et sélectionnez l&apos;action globale, l&apos;action rapide, le flux d&apos;écran ou le flux mobile associé.</inlineHelpText>
+        <inlineHelpText>Find and select the associated global action, quick action, screen flow, or mobile flow.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>

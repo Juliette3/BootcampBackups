@@ -6,7 +6,7 @@
  * ScheduleUserStoryFetch Susf = new ScheduleUserStoryFetch (prpjectRecordId);
  * String str = Datetime.now().addSeconds(5).format('s m H d M ? yyyy');
  * String jobID = system.schedule('ScheduleUserStoryFetch - ' + DateTime.Now() + '.' + math.mod(DateTime.now().getTime(), 1000), str, Susf);
- *
+ * @lastModifiedBy Kunal Kaushik
  * */
 
 public with sharing class VSTSIntegration extends VSTSIntegrationConstants implements IIntegration {
@@ -19,17 +19,6 @@ public with sharing class VSTSIntegration extends VSTSIntegrationConstants imple
     public VSTSIntegration(){}
     public VSTSIntegration(Id projectId){
         pId = projectId;
-    }
-    
-    public Map<String, Id> userMap {
-        get {
-            if (null == userMap) {
-                Boolean unableCommunityUser = [SELECT Id, Enable_Community_User__c FROM copado__Project__c WHERE Id = :pId].Enable_Community_User__c;
-                userMap = CopadoCCMutilities.returnUsers(unableCommunityUser);
-            }
-            return userMap;
-        }
-        private set;
     }
 
     public Map<String, String> recordTypeMap {
@@ -149,7 +138,7 @@ public with sharing class VSTSIntegration extends VSTSIntegrationConstants imple
         String finalJson = '[{';
         for (String fieldName : fieldMap.keyset()) {
             if (null != cUserStory.get(fieldName)) {
-                String fieldKey = fieldMap.get(fieldName), fieldValue = String.escapeSingleQuotes(String.valueOf(cUserStory.get(fieldName)));
+                String fieldKey = fieldMap.get(fieldName), fieldValue = String.escapeSingleQuotes(String.valueOf(cUserStory.get(fieldName))).replace('"','\\"');
                 if (fieldName == RECORD_TYPE_ID) {
                     String recordTypeId = fieldValue;
                     String recordTypeName = userStoryRecordTypeMap.get(recordTypeId);
@@ -408,9 +397,7 @@ public with sharing class VSTSIntegration extends VSTSIntegrationConstants imple
                 }
                 if(String.isNotBlank(userEmail)){
                     userEmail = userEmail.toLowerCase();
-                }
-                if (userMap.containsKey(userEmail)) {
-                    keyValuepairTempMap.put(DEVELOPER_KEYWORD, userMap.get(userEmail));
+                    keyValuepairTempMap.put(DEVELOPER_KEYWORD, userEmail);
                 }
             } else if (
                 fields.get(sItem) instanceof String ||
@@ -426,9 +413,7 @@ public with sharing class VSTSIntegration extends VSTSIntegrationConstants imple
                 Map<String, Object> tempObject = (Map<String, Object>) fields.get(sItem);
                 if (null != tempObject.get(UNIQUE_NAME)) {
                     String cuEmail = String.valueOf(tempObject.get(UNIQUE_NAME)).toLowerCase();
-                    if (userMap.containsKey(cuEmail)) {
-                        keyValuepairTempMap.put(sItem.toLowerCase(), userMap.get(cuEmail));
-                    }
+                    keyValuepairTempMap.put(sItem.toLowerCase(), cuEmail);
                 } else if (null != tempObject.get(DISPLAY_NAME)) {
                     keyValuepairTempMap.put(sItem.toLowerCase(), (String) tempObject.get(DISPLAY_NAME));
                 }

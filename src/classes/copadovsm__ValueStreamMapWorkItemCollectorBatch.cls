@@ -1,9 +1,9 @@
 /*
-Ce fichier est généré ne correspond pas au code source de cette
-classe globale gérée.
-Ce fichier en lecture seule affiche les constructeurs globaux,
-les méthodes, les variables et les propriétés de la classe.
-Pour activer le code à compiler, toutes les méthodes renvoient null.
+This file is generated and isn't the actual source code for this
+managed global class.
+This read-only file shows the class's global constructors,
+methods, variables, and properties.
+To enable code to compile, all methods return null.
 */
 global class ValueStreamMapWorkItemCollectorBatch implements Database.Batchable<SObject>, Database.Stateful {
     global ValueStreamMapWorkItemCollectorBatch(List<copadovsm__Value_Stream_Map__c> valueStreamMaps, Integer index, List<String> workItemIds) {

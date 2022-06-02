@@ -300,6 +300,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Enable_Rollback__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</inlineHelpText>
+        <label>Enable Rollback</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Index_Back_Promotion_metadata__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -650,6 +661,31 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Unique_Job_Template</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+AND(
+NOT(ISBLANK(copado__CommitJobTemplateOverride__c)),
+OR(
+copado__CommitJobTemplateOverride__c == copado__Deployment_Job_Template_Override__c,
+copado__CommitJobTemplateOverride__c == copado__Promotion_Job_Template_Override__c
+)),
+AND(
+NOT(ISBLANK(copado__Promotion_Job_Template_Override__c)),
+OR(
+copado__Promotion_Job_Template_Override__c == copado__Deployment_Job_Template_Override__c,
+copado__Promotion_Job_Template_Override__c == copado__CommitJobTemplateOverride__c
+)),
+AND(
+NOT(ISBLANK(copado__Deployment_Job_Template_Override__c)),
+OR(
+copado__Deployment_Job_Template_Override__c == copado__Promotion_Job_Template_Override__c,
+copado__Deployment_Job_Template_Override__c == copado__CommitJobTemplateOverride__c
+))
+)</errorConditionFormula>
+        <errorMessage>An environment cannot have the same job template for Commit, Promote and Deploy.</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
         <active>true</active>
